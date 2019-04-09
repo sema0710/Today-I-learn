@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(145, 221, 82);
+        height:1000px;
+        scrollbar-face-color: rgb(101, 253, 101);
+        scrollbar-color:rgb(68, 253, 68);
+      }
+      h1 {
+        color: whitesmoke;
+      }
+      p {
+        color: whitesmoke;
+        font-size: 30px;
+      }
+      .to {
+        margin-left: 30px;
+        border-radius: 3px;
+        border: none;
+        width: 200px;
+        height: 30px;
+      }
+      #enter {
+        width: 1000px;
+        height: 50px;
+        font-size: 45px;
+        margin-bottom: 50px;
+      }
+      hr {
+        width: 1100px;
+        border: rgba(255, 255, 255, 0.781) 2px solid;
+        margin-bottom: 50px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: white;
+        position: absolute;
+        top: 300px;
+      }
+      #eye1 {
+        left: 100px;
+      }
+      #eye2 {
+        left: 1200px;
+      }
+      #blackeye1 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: black;
+        left: 150px;
+        top: 350px;
+      }
+      #blackeye2 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: black;
+        left: 1250px;
+        top: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>진수변환</h1>
+      <input type="text" id="enter" />
+      <hr />
+      <input
+        type="button"
+        class="to"
+        value="10진수를 2진수로"
+        onclick="click1()"
+      />
+      <input
+        type="button"
+        class="to"
+        value="10진수를 8진수로"
+        onclick="click2()"
+      />
+      <input
+        type="button"
+        class="to"
+        value="10진수를 16진수로"
+        onclick="click3()"
+      />
+      <p id="text">input a number</p>
+      <div id="eye1"></div>
+      <div id="eye2"></div>
+      <div id="blackeye1"></div>
+      <div id="blackeye2"></div>
+    </center>
+    <script>
+      var text;
+      function click1() {
+        var input1 = document.getElementById("enter");
+        var where = document.getElementById("text");
+        text = input1.value;
+        text = parseInt(text);
+        where.innerHTML = text.toString(2);
+      }
+      function click2() {
+        var input2 = document.getElementById("enter");
+        var where = document.getElementById("text");
+        text = input2.value;
+        text = parseInt(text);
+        where.innerHTML = text.toString(8);
+      }
+      function click3() {
+        var input3 = document.getElementById("enter");
+        var where = document.getElementById("text");
+        text = input3.value;
+        text = parseInt(text);
+        where.innerHTML = text.toString(16);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>write</title>
+    <style>
+        #title{
+            border-radius:3px;
+            position:absolute;
+            left:32%;
+            width:600px;
+            border:black solid 1px; 
+            background:gray;
+        }
+        label{
+            border-radius: 10px;
+            position:absolute;
+            left:29%;
+            height: 25px;
+        }
+        hr{
+            width:700px;
+            border:black 1px solid;
+        }
+        textarea{
+            border:1px solid black;
+            font-size:15px;
+            background:gray;
+            border-radius:3px;
+        }
+        #button{
+            outline:none;
+            background:linear-gradient(90deg,rgb(87, 87, 87),white);
+            width:150px;
+            height: 30px;
+            border:none;
+            border-radius: 10px;
+            font-size:20px;
+        }
+        #button:hover{
+            font-size:23px;
+        }
+        #button:active{
+            font-size:20px;
+        }
+        #fileupload{
+            position: absolute;
+            left:450px;
+        }
+        p{
+            position:absolute;
+            left:450px;
+        }
+        #area:checked{
+            outline:none;
+            border:rgb(92, 92, 92) 1px solid;
+        }
+        #area:hover{
+            outline:none; 
+            border:rgb(99, 99, 99) 1px solid;
+        }
+        #title:hover{
+            outline:none; 
+            border:rgb(95, 95, 95) solid 1px;
+        }
+        #title:checked{
+            outline:none; 
+            border:rgb(97, 97, 97) solid 1px;
+        }
+        #area:focus {
+            outline: none;
+        } 
+        #title:focus{
+            outline:rgb(97, 97, 97);
+            border:rgb(94, 94, 94) solid 1px;
+        }
+        body{
+            width:auto;
+            height:50px;
+            background:rgb(46, 46, 46);
+            margin-bottom:10px;
+            color:rgb(202, 202, 202);
+            font-size:20px;
+            text-align:left;
+        }
+        i{
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"><i class="fas fa-heart"></i>junsang blog</div>
+    <form method="POST" enctype="multipart/form-data">
+        <label>제목</label><input type="text" name="title" id="title"/><br/>
+        <hr id="line">  
+        <p>글 내용</p>
+        <br/><br/>
+        <center>
+        <textarea id="area" name="text-main" rows="30" cols="100"></textarea>
+        <br/><input type="file" name="file" id="fileupload"/>
+        <br/><input type="button" id="button" onclick="clicker1()" value="글 올리기">
+        </center>
+    </form> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function clicker1(){
+            var text = document.getElementById("area").value;
+            var title = document.getElementById("title").value;
+            var data={
+                title:title,
+                text:text
+            }
+
+            axios.post("    ",data).then(function(res){
+                console.log(res);
+                alert("success");
+            }).catch(function(err){
+                console.log(err);
+            })
+
+        }
+    </script>
+</body>
+</html>
