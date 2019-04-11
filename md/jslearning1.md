@@ -51,7 +51,7 @@ console.log('Bye');
     setTimeout()에 있는 것이 실행된다.
 
 # 중첩콜백
-    >listen('click', function (e){  //1번으로 실행됨  
+>listen('click', function (e){  //1번으로 실행됨  
     setTimeout(function(){  //2번으로 실행됨  
         ajax('https://api.example.com/endpoint', function (text){ //3번으로 실행됨  
             if (text == "hello") {  //4번으로 실행됨
@@ -63,10 +63,8 @@ console.log('Bye');
         });  
     }, 500);  
     });  
-    이런 코드들은 너무 보기 힘들다.
-    다르게 표현하는 법이 필요하다고 생각한다.
-# 프로미스
-    
+  
+
 # 진행중....이거 너무 길어요 ㅠㅜㅜㅜㅠㅜㅠㅜㅠㅜㅠㅜㅠㅜㅠ
    
 
