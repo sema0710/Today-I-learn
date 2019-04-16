@@ -7,21 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+  <form>
+    <input type="text" id="form__text"/>
+    <input type="button" id="form__button" onclick="click1()" value="button" />
+  </form>
     <script>
-        var ul = document.createElement('ul');
-        document.body.appendChild(ul);
-        
-        var li1 = document.createElement('li');
-        var li2 = document.createElement('li');
-        li2.innerHTML = "test";
-        li1.innerHTML = "test";
-        ul.appendChild(li1);
-        ul.appendChild(li2);
-        
-        function hide(e){
-          e.target.style.visibility = 'hidden';
-        }
-        ul.addEventListener('click', hide, false);
+      var text = document.getElementById("form__text");
+      var button = document.getElementById("form__button");
+      var ul = document.createElement('ul');  
+      document.body.appendChild(ul);  
+      function click1(){
+        console.log("click");
+        var li = document.createElement("li");
+        li.innerHTML = text.value;
+        ul.appendChild(li); 
+    }
         </script>
 </body>
 </html>
