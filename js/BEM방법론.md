@@ -1,5 +1,6 @@
 ## BEM방법론
 ---
+class명을 정하는 규칙이다.
 block element modifier의 줄임말이다.
 id에는 사용하면 안된다. 무조건 class에만!
 
