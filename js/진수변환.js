@@ -1,4 +1,4 @@
-function clicked(){
+    function clicked(){
     var jin1 = document.getElementById("jinsu1").value;
     var jin2 = document.getElementById("jinsu2").value;
     var n1 = document.getElementById("num1").value;
