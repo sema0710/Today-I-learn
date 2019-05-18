@@ -69,3 +69,38 @@ arr.reverse(); // --> arr = [5,4,3,2,1];
     뭔...망할 map도 아니고..왜 함수로 받지..
 > const arr = [1,4,5,3,6];
 arr.sort(); --> arr = [1,3,4,5,6];
+
+## 배열 검색
+    배열 안에서 뭔가를 찾으려고 할때는 여러가지를 사용 할 수 있다.
+
+### indexOf , lastindexOf
+    indexOf는 찾고자 하는 것과 정확히 일치(===) 하는 첫번째 요소의 인덱스를 반환합니다.  
+    lastindexOf는 배열의 끝에서 부터 찾는다. 마치 음수 인덱스같구만    
+    이 두개는 못찾으면 -1을 반환한다.  
+> const o = {name : "jarry"};    
+const arr = {1,5,"a",o,true,5,[1,2],"9"};   
+arr.indexOf(5); // --> 1  
+arr.lastindexOf(5); // --> 5  
+
+### findindex
+indexOf와의 다른점은 보조함수를 사용하여 검색 조건을 지정할 수 있는 것이다.    
+하지만 시작 인덱스를 지정 할 수 없고, 뒤에서부터 찾는 findLastIndex같은 건 없음.    
+
+> const arr = [{id:5,name:"judith"},{id:7,name:"francis"}];      
+arr.findIndex(o => o.id === 5); // {id:5,name:"judith"}의 위치인 0을 반환 없으면 -1    
+
+### find
+find는 위치가 아니라 그 값 자체를 반환한다.  
+만약에 없으면 undifined를 반환한다.
+> const arr = [{id:5,name:"judith"},{id:7,name:"francis"}];
+arr.find(o => o.id === 5); // {id:5,name:"judith"} 반환
+
+find와 findindex에 전달하는 함수는 배열의 각 요소를 첫번째 매개변수로 받고, 현재 요소의   인덱스와 배열 자체도 매개변수로 받는다.  
+이런 것은 다양하게 이용 할 수 있단다.  
+특정 인덱스보다 뒤에 있는 제곱수를 찾아야 한다면?
+> const arr = [1,17,16,5,4,16,10,3,49];  
+arr.find((x,i) => i > 2 &&Number.isInterger(Math.sqrt(x))); // 4  
+
+ 
+
+
