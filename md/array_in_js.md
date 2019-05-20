@@ -101,6 +101,20 @@ find와 findindex에 전달하는 함수는 배열의 각 요소를 첫번째 �
 > const arr = [1,17,16,5,4,16,10,3,49];  
 arr.find((x,i) => i > 2 &&Number.isInterger(Math.sqrt(x))); // 4  
 
+### find 예제  
+    js는 정말 어렵다...  
+> const arr = [{id : 5 , name : "tester"},{id : 1 , name : "tester"}];  
+arr.find(p => p.id === 5); // --> {id : 5 , name : "tester"};  
+
+## some , every
+    some은 조건에 맞는 요소를 찾으면 즉시 검색을 멈추고 true를 반환
+    없으면 false를 반환
+> const arr = [5,7,12,15,17];  
+arr.some(x => x%2 === 0);//x 나누기 2의 나머지가 0인놈을 찾아라 --> 12  
+arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인지 아닌지를 판별하는 것이다. math.sqrt(x);는 x에 루트를 씌운다.  
+
+    every는 모든 요소가 조건에 맞아야지 true를 반환하고 그렇지 않다면 false를 반환한다.
  
 
 
+* asdfasdf
