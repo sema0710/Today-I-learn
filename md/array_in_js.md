@@ -109,22 +109,30 @@ arr.find(p => p.id === 5); // --> {id : 5 , name : "tester"};
 ## some , every
     some은 조건에 맞는 요소를 찾으면 즉시 검색을 멈추고 true를 반환
     없으면 false를 반환
-> const arr = [5,7,12,15,17];  
-arr.some(x => x%2 === 0);//x 나누기 2의 나머지가 0인놈을 찾아라 --> 12  
-arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인지 아닌지를 판별하는 것이다. math.sqrt(x);는 x에 루트를 씌운다.  
-
-    every는 모든 요소가 조건에 맞아야지 true를 반환하고 그렇지 않다면 false를 반환한다.
+> const arr = [5,7,12,15,17];    
+arr.some(x => x%2 === 0);//x 나누기 2의 나머지가 0인놈을 찾아라 --> 12    
+arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인지 아닌지를 판별하는 것이다. math.sqrt(x);는 x에 루트를 씌운다.    
+  
+    every는 모든 요소가 조건에 맞아야지 true를 반환하고 그렇지 않다면 false를 반환한다.  
  
 ## map,filter
-    배열 메서드 중 가장 유용한 메서드 라고 한다.
-    map은 배열 요소를 변형한다.
-    하지만 원래 배열은 안고친다.
-> const cart = [{name : "widget",price:100},{name : "gadget",price:"1000"}];
-    cont name = cart.map(x => x.name); // ["widget","gadget"];
-    const prices = cart.map(x.price); // [100,1000];
-    const discountPrice = prices.map(x => x*0.9); // [90,900];
-    filter는 필요한 것들만 남기는 것이다.
+    배열 메서드 중 가장 유용한 메서드 라고 한다.  
+    map은 배열 요소를 변형한다.  
+    하지만 원래 배열은 안고친다.  
+> const cart = [{name : "widget",price:100},{name : "gadget",price:"1000"}];  
+    cont name = cart.map(x => x.name); // ["widget","gadget"];  
+    const prices = cart.map(x.price); // [100,1000];  
+    const discountPrice = prices.map(x => x*0.9); // [90,900];  
+
+    filter는 필요한 것들만 남기는 것이다.  
 
 ## reduce
-    learning javascript 필자가 가장 좋아한단다.
-    map과는 다르게 사본이 아니고 실제로 변한다.
+    learning javascript 필자가 가장 좋아한단다.  
+    map과는 다르게 사본이 아니고 실제로 변한다.  
+    map과는 매개변수도 다르다. 
+
+> const arr = [5,7,2,4];  
+    const sum = arr.reduce((a,x) => a+= x,0);  
+
+    reduce의 첫번째 매개변수는 배열이 줄어드는 대상인 어큐뮬레이터이다.
+    두 번째 매개변수부터는 여태까지 설명한 콜백의 순서대로 현재 배열 요소, 현재 인덱스 , 배열 자체를 받는다.  
