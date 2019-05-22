@@ -115,6 +115,16 @@ arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인
 
     every는 모든 요소가 조건에 맞아야지 true를 반환하고 그렇지 않다면 false를 반환한다.
  
+## map,filter
+    배열 메서드 중 가장 유용한 메서드 라고 한다.
+    map은 배열 요소를 변형한다.
+    하지만 원래 배열은 안고친다.
+> const cart = [{name : "widget",price:100},{name : "gadget",price:"1000"}];
+    cont name = cart.map(x => x.name); // ["widget","gadget"];
+    const prices = cart.map(x.price); // [100,1000];
+    const discountPrice = prices.map(x => x*0.9); // [90,900];
+    filter는 필요한 것들만 남기는 것이다.
 
-
-* asdfasdf
+## reduce
+    learning javascript 필자가 가장 좋아한단다.
+    map과는 다르게 사본이 아니고 실제로 변한다.
