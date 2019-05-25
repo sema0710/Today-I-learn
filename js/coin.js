@@ -1,28 +1,36 @@
-function rand(m,n){
-    return m+Math.floor((n-m+1)*Math.random());
-    //m이상 n 이하의 무작위 정수를 반환
+function coin(){
+    let coin = Math.random() * 2 + 1;
+    return parseInt(coin);
 }
-function randFace(){
-    return ["crown","anchor","heart","spade","club","diamond"]
-    rand[(0,5)];
-}
-//여러 모양들 중에서 1개를 뽑는다.
-let funds = 50;
-let totalBet = 0;
-let betWhere = randFace();
-let bet = rand(1,funds);
-const shape = {crown:0,anchor:0,heart:0,spade:0,club:0,diamond:0};
-let randomshape = randFace();
-let win = 0;
-if(bet === 7){
-    totalBet = funds;
-}
-else{
-    totalBet = bet;
-}
-funds = funds - totalBet;
-shape[betWhere] = totalBet;
-if(randomshape === betWhere){
-    funds = totalBet * 2;
-}
-console.log(funds);
+let button = document.getElementById("rollbutton");
+let front = document.getElementById("front");
+let back = document.getElementById("back");
+let where;
+front.addEventListener("click",function click(){
+    where = front.value;
+    console.log(where);
+})
+back.addEventListener("click",function click(){
+    where = back.value;
+    console.log(where);    
+})
+button.addEventListener("click", function click(){
+    console.log("on");
+    let p = document.getElementById("text");
+    p.innerHTML = "";
+    document.getElementById("coin").style.animationDuration = "0.5s";
+    document.getElementById("coin").style.animationName = "roll";
+    document.getElementById("coin").style.animationIterationCount = 5; 
+    if(coin() == 1){
+        p.innerHTML = "front";
+    }
+    else{
+        p.innerHTML = "back";
+    }
+    if(p.innerHTML == where){
+        document.getElementById("result").innerHTML = "win";
+    }
+    else{
+        document.getElementById("result").innerHTML = "lose"
+    }
+});

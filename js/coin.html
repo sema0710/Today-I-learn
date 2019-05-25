@@ -5,8 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: 'Courier New', Courier, monospace;
+        }   
+        body{
+            background-color:blueviolet;
+            position:relative;  
+        }
+        #coin{
+            width:150px;
+            height:150px;
+            background-color:silver;
+            border-radius: 50%;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: 5; 
+        }
+        #text{
+            font-size:30px;
+            color:white;
+            margin-top:40%;
+            text-align: center;
+        }
+        #buttondiv{
+            margin-top:5%;;
+            display:flex;
+            justify-content: center;
+        }
+        button{
+            border:0;
+            width:20%;
+            background:0;
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+            font-size:30px;
+        }
+        #background{
+            display:flex;
+            justify-content: center;
+        }
+        #radiodiv{
+            display:flex;
+            justify-content: center;
+            margin-top:5%;
+        }
+        label{
+            font-size:30px;
+        }
+        #result{
+            text-align:center;
+            font-size:30px;
+        }
+        @keyframes roll{
+            from{
+                transform: rotateY(10deg);
+            }
+            to{
+                transform:rotateY(88deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <script src="C:/Users/user/Desktop/TIL/Today I learn/js/coin.js"></script>
+    <script src="coin.js"></script>
+<div id="background">
+        <div id="coin"> 
+        <p id="text"></p>
+</div>
+</div>
+<div id="radiodiv">
+    <label>앞면에 걸기</label><input type="radio" name="front_back" value="front" id="front">
+    <br/>
+    <label>뒷면에 걸기</label><input type="radio" name="front_back" value="back" id="back">
+</div>
+    <div id="buttondiv">
+        <button id="rollbutton">roll the coin</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
 </body>
 </html>
