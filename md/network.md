@@ -2,6 +2,7 @@
 ## protocol
     컴퓨터와 컴퓨터가 네트워크를 이용하여 통신을 하기 위해 정해놓은 데이터 통신을 위한 규칙의 집합.  
     ex)TCP/IP  
+- - -
 ## network model
     자동차를 만들 때 단계를 나누어서 순차적으로 제작이 이루어 진다.  
     왜냐하면, 이 방법이 훨씬 시간이 적게 들고, 일의 능률이 올라간다.  
@@ -10,6 +11,7 @@
     프로토콜의 각 계층의 기능을 실현하는 계체(?) --> 프로토콜의 각 계층을 엔티티라고 한다(entity)
     각 계층은 하위 계층에서 서비스(신호)를 받고 상위층에 서비스(신호)를 보낸다.  
     이렇게, 상위계층과 하위계층의 통신규약을 인터페이스라고 하고, 같은계층에서 통신할때의 약속을 프로토콜이라고 한다.  
+- - -
 ## OSI 참조모델 
     국제표준화기구(OSI)가 OSI모델을 발표하였다. --> 어떤 두 시스템이 구조와 상관없이 서로 통신할 수 있게 해주는 protocol  
 <img src="https://madplay.github.io/img/post/2018-02-17-network-osi-7-layer-1.png"/>
@@ -46,8 +48,21 @@
     7계층에서 만들어진 데이터에 확장자를 붙여줌. 그리고 데이터의 동일한 형식을 지원해줌.  
 * 응용계층
     user interface를 지원함  
-
+- - - 
 ## TCP/IP 프로토콜
     현재는 OSI프로토콜보다 TCP/IP 프로토콜을 더 많이 사용한다.
     그 이유는 먼저 나왔기 때문이고, 개방적이고, 표준화되는 프로토콜이 실제로 사용가능한 프로토콜인지 중시한다는 점이 대중화를 이끌었다.  
-* 
+OSI계층과 비교하면 이 사진과 같을 것이다.
+<img src="https://mblogthumb-phinf.pstatic.net/MjAxODA0MDlfMTIy/MDAxNTIzMjcyNzE3Nzgy.JONryPAIL3Zz5YizEyEM7nGVjCmBnLSHyz0aPk2mfWgg.kSLOlqPQiC5zGm3VH4veVzWfOdDQ4SdvFInD149CfRQg.PNG.zkdxhd10823/tcpip.PNG?type=w800">  
+- - -
+## http
+    browser에서 사용되는 네트워크 프로토콜의 하나이다.  
+    보통 80port를 사용한다.  
+    TCP 방식을 사용하기 때문에,  return값이 돌아오는데, 3자리 숫자로 나누어져 있다.  
+    100대 --> 정보의 제공  
+    200대 --> 긍정적인 대답
+    300대 --> 전송 요구(성공은 했는데, 이렇게 보내주면 보안에도 좋고 더 보기 좋을거 같다고 말하는 것임)  
+    400대 --> 클라이언트 오류(front-end 다 죽는다!!)
+    500대 --> 서버오류(back-end 다 죽는다!!)  
+    자세한 내용은 밑의 사진을 확인하자
+<img src="https://t1.daumcdn.net/cfile/tistory/1327B40B4C6B9E4D13"> 
