@@ -21,3 +21,5 @@ https://codepen.io/sema0710/pen/GabdvK
 JSX는 JS 확장판이라고 한다.  
 JSX는 react에서 요소를 제공.  
 return 값 안에 있는 h1태그가 JSX문법이다.  
+react_2 주소 : https://codepen.io/sema0710/pen/argKOM  
+
