@@ -1,5 +1,5 @@
 # array in js
-## push,pop
+## push,pop,shift,unshift
     push는 맨 뒤에 요소를 추가 한 뒤에 늘어난 길이를 반환한다.  
     pop은 맨 뒤의 요소를 삭제 한 뒤에 삭제한 요소를 반환한다.  
     shift는 맨 앞의 요소를 삭제 후에 삭제한 요소를 반환한다.  
