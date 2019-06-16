@@ -32,4 +32,5 @@ let test1 = new test;// test1에 test 함수로 객체를 생성
     객체 안에 속성은 __proto__밖에 없다.
     그런데 이 __proto__는 prototype object를 가리킨다.  
     그래서 만약 객체 이름이 test면, prototype object 안에 있는 요소들을 끌어 올 수 있다.   
+    
 

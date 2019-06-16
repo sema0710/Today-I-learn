@@ -1,5 +1,5 @@
 # animation in css
-fucking css in animation
+css in animation
 
 ## animation 기초
     css에는 animation이라는 속성이 있다.  
