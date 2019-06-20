@@ -19,7 +19,7 @@ class TodoItemList extends Component {
     );
 
     return (
-      <div>
+      <div> 
         {todoList}    
       </div>
     );
