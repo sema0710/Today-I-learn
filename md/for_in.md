@@ -1,4 +1,4 @@
-# for_in문 
+    # for_in문 
 ### 매개변수는 배열의 인덱스를 받아온다. --> 값은 못받아옴  
 > const player = {name: 'oh' , rank : 'bronze' , age:25}  
 for(let prop in player){  
