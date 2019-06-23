@@ -11,12 +11,12 @@ arr.shift();//1,[2,3,4]
 arr.unshift(0);//4,[0,2,3,4]  
 
 ## push * num --> concat
-    배열의 끝에 여러 요스를 추가한 사본을 반환한다.--> arr값은 변하지 않는다.
+    배열의 끝에 여러 요소를 추가한 사본을 반환한다.--> arr값은 변하지 않는다.
 >   const arr = [1,2,3];  
     arr.concat(4,5,6);  
     arr.concat([4,5],6);
 
-## slicing 
+## slicing
     배열의 일부를 가져올때 사용하는 method --> slice  
     slice는 매개변수를 2개를 받는데, 한개는 어디서 부터 자를 것인지를 정하는 것이고 다른 하나는 어디까지 자를지를 정한다. index는 0부터 시작한다.   
     음수 인덱스를 사용하면 배열의 뒤에서 부터 지정한다.
@@ -112,9 +112,9 @@ arr.find(p => p.id === 5); // --> {id : 5 , name : "tester"};
 > const arr = [5,7,12,15,17];    
 arr.some(x => x%2 === 0);//x 나누기 2의 나머지가 0인놈을 찾아라 --> 12    
 arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인지 아닌지를 판별하는 것이다. math.sqrt(x);는 x에 루트를 씌운다.    
-  
+
     every는 모든 요소가 조건에 맞아야지 true를 반환하고 그렇지 않다면 false를 반환한다.  
- 
+
 ## map,filter
     배열 메서드 중 가장 유용한 메서드 라고 한다.  
     map은 배열 요소를 변형한다.  
@@ -129,7 +129,7 @@ arr.some(x => Number.isInteger(Math.sqrt(x))); // number.isInteger는 integer인
 ## reduce
     learning javascript 필자가 가장 좋아한단다.  
     map과는 다르게 사본이 아니고 실제로 변한다.  
-    map과는 매개변수도 다르다. 
+    map과는 매개변수도 다르다.
 
 > const arr = [5,7,2,4];  
     const sum = arr.reduce((a,x) => a+= x,0);  
