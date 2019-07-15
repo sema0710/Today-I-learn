@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{ 
+            margin:0;
+            border:0;
+            padding:0;
+            border-collapse: collapse;
+        }
+        body{
+            width:1000%px;
+            height:1750px;
+            display:flex;
+            justify-content: center;
+        }
+        #MainDiv{
+            width:1240px;
+        }
+        td{
+            border:1px black solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        #PersonalInfomation{
+            border:4px black;
+            border-style:double;
+        }
+
+        .FirstContent{
+            width:100px;
+        }
+        #NumberBlank{
+            width:300px;
+        }
+        .SchoolCode{
+            width:200px;
+        }
+        #SchoolCodeBlank{
+            width:200px;
+        }
+        #Class{
+            width:50px;
+        }
+        #ClassBlank{
+            width:50px;
+        }
+        #TestCode{
+            width:140px;
+        }
+        #TestCodeBlank{
+            width:191px;
+        }
+        div > table:nth-child(4) > tbody > tr > td > table > tbody > tr > td:nth-child(2){
+            width:300px;
+            border-top:none;
+        }
+        div > table:nth-child(3) > tbody > tr > td:nth-child(2) > table > tbody > tr > td:nth-child(1){
+            width:100px;
+            border-top:none;
+            border-left:none;
+        }  
+        div > table:nth-child(3) > tbody > tr > td:nth-child(2) > table > tbody > tr > td{
+            border-top:none;
+        }
+        div > table:nth-child(4) > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(1){
+            width:100px;
+        }
+        #NameBlank{
+            width:199px;
+        }
+        #BirthBlank{
+            width:302px;
+        }
+        #gender{
+            width:70px;
+        }
+        #genderBlank{
+            width:260px;
+        }
+        #GeneralModel{
+            width:325px;
+            text-align:left;
+            padding-left:5px;
+        }
+        div > table:nth-child(5) > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(1) > table > tbody > tr > td{
+            width: 258px;
+            text-align: left;
+            padding-left:5px;
+        }
+        div > table:nth-child(5) > tbody > tr > td:nth-child(4) > table > tbody > tr > td{
+            border:none;
+            padding:3px;
+            width:150px;
+            text-align:left;
+        }
+
+        div > table:nth-child(5) > tbody > tr > td:nth-child(4) > table > tbody > tr:first-child > td{
+            border-bottom:1px black solid;
+        }
+
+        #VolunteerTalent{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="MainDiv">
+    <h2>2020학년도 대덕소프트웨어마이스터고등학교 입학원서</h2>
+    <table id="main">
+        <tr>
+            <td class="FirstContent"x>접수번호</td>
+            <td id="NumberBlank"></td>
+            <td class="SchoolCode">중학교 코드</td>
+            <td id="SchoolCodeBlank"></td>
+            <td id="Class">반</td>
+            <td id="ClassBlank"></td>
+            <td id="TestCode">수험번호</td>
+            <td id="TestCodeBlank"></td>
+        </tr>
+    </table>
+
+    <table id="second">
+        <tr>
+        <td class="FirstContent">지원자<pre></pre>인적사항</td>
+        <td>
+            <table>
+                <tr>
+                        <td>성명</td>
+                        <td id="NameBlank">빈칸</td>
+                        <td class="SchoolCode">생년월일</td>
+                        <td id="BirthBlank">빈칸</td>
+                        <td id="gender">성별</td>
+                        <td id="genderBlank">
+                            <label>남</label>
+                            <input type="checkbox"/>
+                            <label>여</label>
+                            <input type="checkbox"/>
+                        </td>
+                </tr>
+                    <tr>
+                        <table>
+                            <tr>
+                                <td>
+                                    주소
+                                </td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="FirstContent">전화<pre></pre>연락처</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>보호자</td>
+                        <td>(   )-(   )-(   )</td>
+                    </tr>
+                    <tr>
+                        <td>학교</td>
+                        <td>(   )-(   )-(   )</td>
+                    </tr>
+                    <tr>
+                        <td>학생</td>
+                        <td>(   )-(   )-(   )</td>
+                    </tr>
+                </table>
+            </td>
+                <td>졸업구분</td>
+                <td>
+                    <table>
+                        <tr><td><input type="checkbox"/> 2020년  월  중학교 졸업예정</td></tr>
+                        <tr><td><input type="checkbox"/> 201 년   중학교 졸업  </td></tr>
+                        <tr><td><input type="checkbox"/> 201 년  월  고입 검정고시 합격</td></tr>
+                    </table>
+                </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="FirstContent">전형유형</td>
+            <td>
+                <table>
+                    <tr>
+                        <td id="GeneralModel">
+                            <label>
+                                <input type="checkbox"/>
+                                일반전형
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox"/>
+                                        마이스터인재전형
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox"/>
+                                        사회통합전형
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>특별전형</td>
+                </table>
+            </td>
+            <td id="VolunteerTalent">지원자<pre></pre>특기<pre></pre>사항</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <label><input type="checkbox"/> 국가유공자 자녀</label>
+                        </td>        
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input type="checkbox"/> 특례입학대상자 </label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td>지역</td>
+            <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <label><input type="checkbox"/> 대전</label>
+                            </td>        
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><input type="checkbox"/> 전국</label>
+                            </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="FirstContent">내신성적</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>교과성적</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>1학년 환산점수</td>
+                        <td>2학년 환산점수</td>
+                        <td>3학년 환산점수</td>
+                        <td>교과성적 환산점수</td>
+                    </tr>
+                    <tr>
+                        <td>빈칸</td>
+                        <td>빈칸</td>
+                        <td>빈칸</td>
+                        <td>빈칸</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <!---->
+                <table>
+                    <tr>
+                        <td>출석점수</td>
+                        <td>봉사활동점수</td>
+                        <td>총점</td>
+                    </tr>
+                    <tr>
+                        <td>빈칸</td>
+                        <td>빈칸</td>
+                        <td>빈칸</td>
+                    </tr>
+                </table>
+                <!---->
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>사진</td>
+            <td>
+                <p>본인은 귀 고등학교에 입학하고자 소정의 서류를 갖추어 지원합니다.</p>
+                <p>2019년 10월  일</p>
+                <p>지원자 : (서명) 보호자 : (서명)</p>                
+            </td>
+            <td>
+                <p>보훈번호:(   )</p>
+                <p>위는 국가유공자 자녀임을 확인함</p>
+                <p>2019.10.  .</p>
+                <p>교사 : (서명)</p>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <p>추천서</p>
+                <p>
+                    본 입학원서의 내용은 사실과 다름이 없으며 상기자는 귀교에 입학 적격자로 인정되므로 추천합니다.
+                </p>
+                <p>2019년 10월  일</p>
+                <p>교사 : (서명) ()중학교장 (직인)</p>
+            </td>
+        </tr>
+    </table>
+    <p>개인정보 활용 동의서</p>
+    <div id="PersonalInfomation">
+        <p>  본 입학원서에 기재된 지원자의 개인정보는 신입생 입학관리업무의 원활한 수행을 위하여 개인정보의 수집·유출·오용·남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용·제공됩니다.</p>
+        <p> 1. (개인정보 처리의 법령상 근거) 본 입학원서에 기재된 개인정보의 처리업무는 초·중등교육법 제47조 및 동법 시행령 제81조, 제82조, 제84조, 제98조 및 본교의 입학전형 실시 계획등에 근거하고 있습니다.</p>
+        <p> 2. (정보주체의 권리) 지원자는 자신이 제공한 개인정보에 대하여 개인정보 보호법 제 4조 및 제35조부터 제38조까지에 따라 열람·처리·정지·정정·삭제·파기 등을 요구할 수 있으며, 개인정보 보호법을 위반한 행위로 인한 손해 발생시에는 개인정보 보호법 제39조에 따라 손해배상을 청구할 수 있습니다.</p>
+        <p> 3. (개인정보 수집항목) 입학관리 업무의 원활한 수행을 위하여 수집하는 개인정보는 성명, 생년월일, 증명사진, 주소, 전화번호, 학력, 출결사항·교과성적 등입니다.</p>
+        <p> 4. (개인정보의 수집·이용 목적) 수집한 지원자의 개인정보는 원서접수, 지원자격·지원결격 사유 확인, 지원자 본인확인, 성적산출, 합격자 명부 관리, 합격증명서 발급, 성적 통지, 통계자료 산출 등 입학관리 업무를 위한 정보로 이용됩니다. </p>
+        <p> 5. (개인정보 제공) 수집한 개인정보는 지원자격·지원결격 사유 조회 및 교과성적 확인 등을 위하여 지원자가 졸업한 중학교 등 관련된 기관에 제공 될 수 있습니다.</p>
+        <p> 6. (개인정보의 보유기간 및 이용기간) 수집한 개인정보는 입학관리 업무를 계속하는 동안 보유·이용할 수 있으며, 입학관리 업무 완료 후 본인의 삭제요칭이 있을 경우에는 모두 삭제됩니다.</p>
+        <p> 7. (개인정보의 수집·이용·제공에 대한 동의 거부) 지원자는 개인정보의 수집·이용·제공에 대한 동의를 거부할 수 있으며, 동의를 거부할 경우 지원결격 사유 조회 등 입학관리 업무를 수행할 수 없으므로 원서를 접수할 수 없습니다.</p>
+    </div>
+    <p>본 입학원서의 개인정보 수집·이용·제공에 동의합니다.</p>
+    <div>
+        <p>지원자 성명 (서명)</p>
+        <p>보호자 성명 (서명)</p>
+    </div>
+    <h3>대덕소프트웨어마이스터고등학교장 귀하</h3>
+    </div>
+</body>
+</html>
