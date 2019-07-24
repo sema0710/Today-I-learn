@@ -151,3 +151,13 @@ list = list(filter(lambda x : x>0 ,range(-10,11))
 3의 배수를 출력하는 lambda 활용 
 list = list(filter(lambda x : x % 3 == 0 , range(1,21)))  
 print(list)
+
+## 복습용 좋은 예제
+    number = int(input())  
+list = input().split(" ")  
+
+if len(list) < number:  
+    print("wrong")  
+for i in range(len(list) - number + 1):  
+    toprint = list[i:i+number]  
+    print(' '.join(toprint))  
