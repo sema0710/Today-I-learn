@@ -85,50 +85,69 @@ result = [n*3 / for n in / a if n%2 ==0] # 원래 shift는 없습니다.
 
 # 집합내포
 
-a = {i for i in 'apple'}
-b = {i for i in 'pineapple' if i not in 'api'}
+a = {i for i in 'apple'}  
+b = {i for i in 'pineapple' if i not in 'api'}  
 
 # 함수
-python은 함수를 만들 때, def라는 것을 사용한다.
-return을 할 때, 여러개를 반환할 때가 있는데, 그러면 집합의 형태로 반환된다 --> ()
-
+python은 함수를 만들 때, def라는 것을 사용한다.  
+return을 할 때, 여러개를 반환할 때가 있는데, 그러면 집합의 형태로 반환된다 --> ()  
 
 # *args / **kwargs
-함수의 매개변수가 몇개가 들어올 지 모르는 경우에는 위의 두개 중 하나를 사용한다
-*args는 리스트로 매개변수가 들어오고 **kwargs는 dictionary로 들어온다.
-
+함수의 매개변수가 몇개가 들어올 지 모르는 경우에는 위의 두개 중 하나를 사용한다  
+*args는 리스트로 매개변수가 들어오고 **kwargs는 dictionary로 들어온다.  
+  
 #타입 힌팅
 
 def sum_mul(word : str, num :int) -> int:
-    # -> :int는  반환값이 int라는것을 의미한다. 매개변수 안에 str과 int는 매개변수가 str과 int로 들어가야 한다는 것을 의미한다.
-    return len(word) * num
-print(sum_mul("asd",4))
+    # -> :int는  반환값이 int라는것을 의미한다. 매개변수 안에 str과 int는 매개변수가 str과 int로 들어가야   한다는 것을 의미한다.  
+    return len(word) * num  
+print(sum_mul("asd",4))  
 
 
-# 함수 예시
-factorial을 돌리는 재귀함수 이다.
-def factorial(number:int):
-    if(number == 1):
-        return 1
-    else:
-        return factorial(number-1) * number
+# 함수 예시  
+factorial을 돌리는 재귀함수 이다.  
+def factorial(number:int):  
+    if(number == 1):  
+        return 1  
+    else:  
+        return factorial(number-1) * number   
 
-number = int(input())
-print(factorial(number))
+number = int(input())  
+print(factorial(number))  
 
-# dictionary 가지고 놀기
+# dictionary 가지고 놀기  
 
 dictionary의 key값은 DB의 기본키와 같다. 절대로 중복되어서는 안된다.
 
-books = {'394039':{'title':'파이썬 코딩의 기술','year':2016,'author':'브랫 슬라킨','price':21600},
-        '230999':{'title':'골빈해커의 3분 딥러닝','year':2017,'author':'김진중','price':19800},
-        '220333':{'title':'c언어 트레이닝','year':2017,'author':'아서 줄라이니','price':16200},
-        '551139':{'title':'웹 해킹 입문','year':2016,'author':'이상환','price':20500}}
+books = {'394039':{'title':'파이썬 코딩의 기술','year':2016,'author':'브랫 슬라킨','price':21600},  
+        '230999':{'title':'골빈해커의 3분 딥러닝','year':2017,'author':'김진중','price':19800},  
+        '220333':{'title':'c언어 트레이닝','year':2017,'author':'아서 줄라이니','price':16200},  
+        '551139':{'title':'웹 해킹 입문','year':2016,'author':'이상환','price':20500}}  
 
-for book in books:
-    if books[book]['price'] > 20000:
-        print(f"{book} {books[book]['title']} {books[book]['price']}")
+for book in books:  
+    if books[book]['price'] > 20000:   
+        print(f"{book} {books[book]['title']} {books[book]['price']}")  
 
-for문으로 books를 돌릴경우, key값만 가지고 오는 것을 확인시켜주는 좋은 예시이다.
+for문으로 books를 돌릴경우, key값만 가지고 오는 것을 확인시켜주는 좋은 예시이다.  
 
-books[book]['price'] == books.get(book).get('price')
+books[book]['price'] == books.get(book).get('price')  
+
+
+# 람다(lanbda)  
+ 
+js의 화살표 함수 같은 느낌(=>)    
+def 이름 없음(x):  
+    if x > 0:  
+        return x  
+        이 코드를  
+lambda x  : x>0 으로 바꾸는 것이다.
+
+filter는 첫번째 매개변수로 def를 받고 두번째로는 배열을 받는데,  
+def에 넣었을 때 참인 것만 반환한다.  
+
+list = list(filter(lambda x : x>0 ,range(-10,11))   
+--> 1,2,3,4,5,6,7,8,9,10  
+
+3의 배수를 출력하는 lambda 활용 
+list = list(filter(lambda x : x % 3 == 0 , range(1,21)))  
+print(list)
