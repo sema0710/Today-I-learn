@@ -156,8 +156,71 @@ print(list)
     number = int(input())  
 list = input().split(" ")  
 
-if len(list) < number:  
+if len(list) < number:  ㅌ
     print("wrong")  
 for i in range(len(list) - number + 1):  
     toprint = list[i:i+number]  
     print(' '.join(toprint))  
+
+## 문자열에 관련된 추가 함수
+
+replace  
+alphabet = "ABCDEFGHIGKLMNOPQRSTUVWXYZ"  
+test = alphabet.replace("A","B")# 이 코드를 실행하게 되면 아래와 같아진다.  
+'''test= "BBCDEFGHIGKLMNOPQRSTUVWXYZ"  '''  
+
+## FILE INPUT/OUTPUT
+
+기본적인 형식
+file 객체명 = open(파일명,mode)
+mode --> r(읽기),r+(읽기 , 쓰기),w(쓰기),a(이어쓰기),t,b(바이너리) --> 이런 모드들은 서로 섞어 가면서 사용할 수 있다.
+
+예제  
+t_file = open('t.txt','wb')-->t.txt라는 파일을 생성 후 쓰기 모드    
+t_file.write(bytes("안녕하세요\n"))-->안녕하세요를 t.txt파일에 씀  
+t_file.close()--> 파일을 닫음  
+
+t_file = open("t.txt","r")-->파일을 읽기 모드로 염
+pp = t_file.read()--> 파일 값을 가져옴  
+print(pp)--> 파일값을 출력
+
+## class
+
+    java 나 javascript 또는 C++ 을 했던 사람이라면 밑의 예시를 보면 이해가 갈 것이다.
+
+    class Duck_hunt:  
+        ducks = 3  
+        def hunting(self):#self = this 인듯 하다.  
+            self.ducks -= 1  
+  
+        def checking(self):  
+            print(self.ducks)  
+  
+    dog1 = Duck_hunt()  
+    dog1.hunting()  
+    dog1.checking()   
+
+## __init__ method
+    init method는 생성자이다. class가 호출되어 객체를 만들 때, 매개변수를 받아서, 그 매개변수를 가공하여, 기본값을 넣어주는 녀석이다.  
+    예시  
+    class Car:  
+        year = 0  
+        color = "none"
+        def __init__(self,color,year):    
+            self.color = color  
+            self.year = year  
+
+## 상속
+    java 나 c++의 상속과는 다르게, python은 그냥 class의 매개변수 안에다가, 상속받을 class를 넣어주면 되는 것이다.  
+    그렇게 되면, 상속받는 class에서 상속 하는 class의 메소드를 모두 사용 할 수 있다. private만 아니라면,  
+
+    class Amy():
+        def FirstName():
+            print("lupi")
+    class jun(Amy):
+        def LastName():
+            print("jun")
+
+    Jun = jun()
+    print(Jun.LastName)
+    print(Jun.FirstName)
