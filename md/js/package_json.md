@@ -41,3 +41,18 @@ https://github.com/npm/node-semver
     "email": "project@hostname.com"
 }
 ```
+7. people fields: author , contrubutors  
+사람 한명은 author, 그리고 여러명이면 contrubutors로 정의한다.  
+contrubutors는 author의 배열이라고 생각하면 편하다.  
+
+```
+"author" : {
+    "name" : "name",
+    "email" : "email",
+    "url" : "url",
+}
+```
+
+
+# =====미완=====
+더 자세한 항목은 https://programmingsummaries.tistory.com/385  
