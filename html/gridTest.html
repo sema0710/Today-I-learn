@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .group{
+            display:grid;
+            grid-template-columns: 15% auto;   
+            grid-template-rows : 10vh 90vh;
+        }
+
+        .grid{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:50px;
+        }
+
+        #s{
+            background-color:red;
+        }
+
+        #t{
+            background-color:white;
+        }
+
+        #s2{
+            background-color:yellow;
+        }
+
+        #t2{
+            background-color:turquoise;
+            display:grid;
+            grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+            grid-template-rows : 15% 85%;
+            font-size:30px;
+        }
+
+        #subTitle{
+            grid-column:1/11;
+            grid-row:1/2;
+            text-align: center;
+        }
+
+        #subText{
+            grid-column: 1/11;
+            grid-row:2/3;
+            font-size:20px;
+            height:100%;
+        }
+
+        #subText div{
+            width:100%;
+            height:auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="group">
+        <div class="grid" id="s">
+            user Info
+        </div>
+        <div class="grid" id="t">
+            title
+        </div>
+        <div class="grid" id="s2">
+            side bar
+        </div>
+        <div class="grid" id="t2">
+            <div class="subGrid" id="subTitle">그래서 grid가 뭔데?</div>
+            <div class="subText" id="subText">
+                <div>
+                    그리드는 웹을 칸을나눠서 디자인 하는 느낌의 css 문법이에요.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
