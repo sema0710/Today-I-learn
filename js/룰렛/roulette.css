@@ -1,0 +1,26 @@
+#rouletteWrapper{
+    display:flex;
+}
+
+.roulette{
+    overflow:hidden;
+    width:100px;
+    height:60px;
+    margin:10px;
+}
+.rouletteBlank1, .rouletteBlank2, .rouletteBlank3{
+    text-align: center;
+    width:100px;
+    height:60px;
+    background-color:black;
+    transition:0.1s cubic-bezier(1, 1, 1, 1);
+    position: relative;
+}
+
+.rouletteBlankUnder{
+    text-align: center;
+    width:100px;
+    height:40px;
+    background-color:black;
+    position: relative;
+}
