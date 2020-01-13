@@ -96,4 +96,43 @@ const App = () => {
 export default App;
 ```
 
-이렇게 하게 되면, ColorBox에서 Consumer를 이용하여 color: 'black'을 사용 할 때, Provider로 blue로 바꿨기 때문에, 파란색으로 변경된다.
+이렇게 하게 되면, ColorBox에서 Consumer를 이용하여 color: 'black'을 사용 할 때, Provider로 blue로 바꿨기 때문에, 파란색으로 변경된다. 이 때, value는 반드시 있어야 하며, 없으면 에러가 난다.
+
+
+
+### 동적 context 사용하기
+
+우선, 위에서 했던 내용대로 쓰게 되면 value에 정적인 값만 넣을 수 있게 된다.
+
+그러면 동적으로 context를 사용하려면 어떻게 해야 할까?
+
+ 위에서 사용했던, ColorContext의 코드를 변경하겠다.
+
+```jsx
+import React,{ createContext, useState } from 'react'
+
+const ColorContext = createContext({
+    state:{ color: 'black' },
+    actions: { changeColor: ()=>{} },
+});
+
+const ColorProvider = ({ childern }) => {
+    const [color, setColor] = useState('black');
+    
+    const value = {
+        state: { color },
+        actions: { setColor },
+    }
+    
+    return (
+    	<ColorContext.Provider value={value}>{childern}</ColorContext.Provider>
+    )
+}
+
+const { Consumer: ColorConsumer } = ColorContext;
+
+export { ColorProvider, ColorConsumer };
+export default ColorContext;
+```
+
+이렇게 되면, Consumer에서 actions를 받아와서 color를 변경 할 수 있고, value도 항상 채워져 있기 때문에, 에러가 나지 않는다.
