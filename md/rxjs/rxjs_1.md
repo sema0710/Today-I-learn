@@ -148,3 +148,51 @@ Subject라는 객체를 생성 한 후에, subscribe 함수로 여러가지 옵�
 
 next함수로 호출해주면, 등록한 모든 observer에서 값을 전달 받을 수 있게 된다.
 
+```javascript
+const { Subject } = require('rxjs');
+
+const subject = new Subject();
+
+subject.subscribe({
+    next:function(v){
+        console.log('observer1'+v);
+    }
+})
+
+subject.subscribe({
+    next:function(v){
+        console.log('observer2'+v);
+    }
+})
+
+subject.next(1);
+subject.next(2);
+```
+
+## pipe
+
+파이퍼블 연산자는 rx의 순수함수를 도와주는 녀석이라고 볼 수 있다.
+
+우리가 값을 여러가지 함수로 계산하기 위해서는 callback으로 처리하거나, 함수 밖에 state를 두는 방법이 있다.
+
+하지만, rxjs는 순수함수이기 때문에, callback으로 이어주는 방법밖에 없는데, 그걸 쉽게 처리하기 위해서
+
+매개변수로 function을 한꺼번에 넣어버려서, 이전의 매개변수에 들어간  function을 처리하고 남은 매개변수를 ... 연산자로 다음 function에 때려 넣는 방식이다.
+
+```javascript
+Observable.create((observer)=>{
+    for(i=0; i< 10;i++){
+        if(i > 10){
+            observer.complete();
+        }
+        observer.next(i);
+    }
+}).pipe(
+    map(function(value){
+        return value + 1;
+    })
+).subscribe(function next(item){
+    console.log(item);
+});
+```
+
