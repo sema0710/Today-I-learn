@@ -124,7 +124,7 @@ const pElement = wrapper.find('p');
 
 이 코드는, js의 document.querySelector와 비슷하다.
 
-find의 매개변수로, 찾고싶은 DOM element의 query를 입력하면 찾을 수 있게 된다.
+하지만 tag만 된다.
 
 
 
@@ -199,5 +199,3 @@ describe('<Counter />', () => {
 처음보는 함수는 instance인데, instance는 class의 method를 끌고오는 역할을 한다.
 
 그래서 instance에서 handler들을 끌고와서 그 후에 state를 비교하는 test를 진행하는 것이다.
-
-잘 된다.
