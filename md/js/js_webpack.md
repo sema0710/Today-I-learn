@@ -112,3 +112,32 @@ js이외의 파일은 어떻게 번들링 하는지에 대해서 적는 파일�
    여기서 사용한 style-loader와 css-loader는 npm으로 install 하고 사용하자.
 
    
+
+4. plugins
+
+   웹팩이 강력한 이유 2번째라고 할 수 있는 plugin에 대해서 설명해 주겠다.
+
+   loader가 실행 된 후 이후에 실행되는 것이다.
+
+   loader보다 훨씬 자유로운 대신에 사용 방법이 모두 다르다.
+
+   ```js
+   import HtmlWebpackPlugin from 'html-webpack-plugin'
+   
+   module.exports = {
+   	plugins: [
+           new HtmlWebpackPlugin()
+       ]
+   }
+   ```
+
+   이 코드를 보면 HtmlWebpackPlugin이라는 것이 있다.
+
+   이 코드는 js를 끌어오지 않아도 html에 js를 자동으로 script처리 해서 넣어준다.
+
+   그리고 번들링하는 plugin이다.
+
+
+
+## 끝
+
