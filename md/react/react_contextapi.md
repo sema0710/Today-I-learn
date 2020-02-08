@@ -135,4 +135,4 @@ export { ColorProvider, ColorConsumer };
 export default ColorContext;
 ```
 
-이렇게 되면, Consumer에서 actions를 받아와서 color를 변경 할 수 있고, value도 항상 채워져 있기 때문에, 에러가 나지 않는다.
+이렇게 되면, Consumer에서 actions를 받아와서 color를 변경 할 수 있고, value도 항상 채워져 있기 때문에, 에러가 나지 않는다.	

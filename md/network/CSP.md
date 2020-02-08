@@ -40,3 +40,22 @@ Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
 Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
 ```
 
+
+
+header에 들어가는 속성들을 보자
+
+* default-src : 모든 리소스에 대한 정책(아래 것들 다 포함)
+* script-src : Javascript 등 웹에서 실행 가능한 스크립트에 대한 정책
+*  object-src : 플러그인, 오브젝트에 대한 정책
+* style-src : style, 즉 css에 대한 정책
+*  img-src : 이미지
+* media-src : video, audio
+*  frame-src : iframe, X-Frame 헤더랑은 비슷한 역할을 하지만, 약간 다르죠.
+*  font-src : font
+*  connect-src : script src로 불러올 수 있는 url에 대한 정책
+* form-action : form 태그 내 action 부분에 대한 정책
+*  sandbox : HTML 샌드박스
+*  script-nonce : 위에 script-src + 아래쪽에 none 이 포함되는 정책, 약간 강한..
+*  plugin-types : 로드할 수 있는 플러그인 타입, 위에 object-src와 접점
+*  reflected-xss : X-XSS-Protection header와 동일한 효과
+*  report-uri : 정책 위반 케이스가 나타났을 때 내용을 전달할 URL
