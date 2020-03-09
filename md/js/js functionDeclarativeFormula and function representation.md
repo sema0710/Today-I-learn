@@ -20,7 +20,7 @@
 이런 코드를 실행할 경우 func1은 undefined가 뜨면서 error가 발생한다.  
 왜냐하면, func는 호이스팅이 되지 않았기 때문이다.  
 const는 당연히 호이스팅 안된다.    
-하지만 func2는 에러가 안난다. function은 hosting이 되기 때문이다.  
+하지만 func2는 에러가 안난다. function은 호이스팅이 되기 때문이다.  
 
 ## this binding
 <b style="color:orange">!주의! 정확하지 않은 정보!</b>  

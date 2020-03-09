@@ -71,7 +71,9 @@
 
 ## 보면 한방에 이해가는 그림과 코드
 
-[](https://www.notion.so/09f9ed39e5884a6e8616719c464206d5#1615ca2c709e417b880aac2ccb6f3617)
+[!img](https://www.notion.so/junsangcloud/scope-and-closer-09f9ed39e5884a6e8616719c464206d5#1615ca2c709e417b880aac2ccb6f3617)
+
+
 
     //global
     function Outermost(){
