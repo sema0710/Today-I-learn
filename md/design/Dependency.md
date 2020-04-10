@@ -2,6 +2,8 @@
 
 ## dependency(의존성)이란?
 
+SOLID중 마지막 D이다.	 
+
 dependency는 아래의 코드로 설명 할 수 있다.
 
 ```js
