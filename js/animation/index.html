@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        /* 드래그나 더블클릭 시에 텍스트가 선택이 되지 않도록 설정 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* 너비 등의 레이아웃에 관여하지 않는 테두리 제거 */
+        outline: 0;
+        /* 마진 패딩 제거*/
+        margin: 0;
+        padding: 0;
+        /* IOS 웹킷에서 터치 시에 등장하는 하이라이트를 제거하기 위함 */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* 영역을 넘는 부분은 숨기기 */
+        background-color: #ffffff; /* 배경은 흰색 */
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <title>Wave</title>
+  </head>
+  <body>
+    Watch out! wave will come!
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
